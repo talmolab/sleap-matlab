@@ -1,4 +1,4 @@
-function net = formDAGNetwork(net, topdownModel, inputScale, BboxSize, centroidConfig, topdownConfig)
+function net = formDAGNetwork(net, topdownModel, inputScale, BboxSize, minThreshold, centroidConfig, topdownConfig)
 % This helper function combines centroid and top-down model along with
 % custom layers in between to form a single DAG network object
 % 
@@ -17,6 +17,9 @@ arguments
 
     % Bounding box size
     BboxSize (1,2) 
+
+    % Minimum Threshold
+    minThreshold (1,1)
 
     % Centroid model configuration
     centroidConfig (1,1) struct
@@ -67,7 +70,7 @@ lgraph = layerGraph(net);
 lgraph = removeLayers(lgraph, 'output');
 
 larray = [TopDownModel.customlayers.Postprocess1CustomLayer('Name', 'postprocesscentroidmodel', ...
-    'MinThresh', 0.3, ...
+    'MinThresh', minThreshold, ...
     'DivScale', inputScale, 'MulScale', centroidConfig.model.heads.centroid.output_stride, ...
     'BboxSize', BboxSize, 'InputScale', 1/inputScale); ...
     larrayTd(2:end-1); ...
