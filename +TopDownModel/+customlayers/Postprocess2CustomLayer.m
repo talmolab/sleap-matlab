@@ -15,9 +15,6 @@ classdef Postprocess2CustomLayer < nnet.layer.Layer
         % Multiplication scale
         MulScale = 1;
 
-        % Division scale
-        DivScale = 1;
-
         % Bounding box size
         BboxSize (1,2) = [1, 1];
     end
@@ -29,7 +26,6 @@ classdef Postprocess2CustomLayer < nnet.layer.Layer
                 options.MinThresh = 0;
                 options.Coordinates (1,1) string {mustBeMember(options.Coordinates, ["xy", "ij"])} = "xy";
                 options.MulScale = 1;
-                options.DivScale = 1;
                 options.BboxSize (1,2) = [1, 1];
                 options.NumInputs = 2;
             end
@@ -67,7 +63,6 @@ classdef Postprocess2CustomLayer < nnet.layer.Layer
 
             Z1 = single(peaks);
 
-            Z1 = Z1 / layer.DivScale;
             Z1 = Z1 * layer.MulScale;
 
             
@@ -105,7 +100,6 @@ classdef Postprocess2CustomLayer < nnet.layer.Layer
 
             Z1 = single(peaks);
 
-            Z1 = Z1 / layer.DivScale;
             Z1 = Z1 * layer.MulScale;
 
             centroidPeaks = permute(centroidPeaks, [2 3 4 1]);

@@ -18,9 +18,6 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
         % Multiplication scale
         MulScale = 1;
 
-        % Division scale
-        DivScale = 1;
-
         % Bounding box size of cropped animals
         BboxSize (1,2) = [1, 1];
 
@@ -39,7 +36,6 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
                 options.Sigma = 0;
                 options.Connectivity = 8;
                 options.MulScale = 1;
-                options.DivScale = 1;
                 options.BboxSize = [1, 1];
                 options.NumInputs = 2;
                 options.InputScale = 1;
@@ -104,8 +100,7 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
                 Z(:,:,:,animalCnt:end) = [];
             end
 
-            Z1 = Z / layer.DivScale;
-            Z1 = Z1 * layer.MulScale;
+            Z1 = Z * layer.MulScale;
 
             inputIm = imresize(inputIm,layer.InputScale);
             
@@ -180,8 +175,7 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
                 Z(:,:,:,animalCnt:end) = [];
             end
 
-            Z1 = Z / layer.DivScale;
-            Z1 = Z1 * layer.MulScale;
+            Z1 = Z * layer.MulScale;
 
             inputIm = imresize(inputIm,layer.InputScale);
 
