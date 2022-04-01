@@ -41,7 +41,7 @@ Installation via the [Add-on Explorer](https://www.mathworks.com/products/matlab
 See the [**demo**](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F85a3255c-4ff5-42ef-9c10-b441318b4322%2F501c4bc8-2509-40fc-aba0-323d33dff728%2Ffiles%2FEphysDemo.mlx&embed=web) illustrating the usage of SLEAP-MATLAB with the included [pretrained models](/pretrained_models) and [sample data](/sample_data).
 
 ## Contact
-Please direct inquiries and interest(❕) to [talmop@salk.edu](mailto:talmop@salk.edu?subject=\[SLEAP-MATLAB\]) with "SLEAP-MATLAB" included in the subject line. 
+Please direct inquiries and interest(❕) to [talmop@salk.edu](mailto:talmop@salk.edu?subject=\[SLEAP-MATLAB feedback\]) with "SLEAP-MATLAB feedback" included in the subject line. 
 
 ## References
 \[1\] Pereira, T. _et. al._. Nature Neuroscience 2022.
