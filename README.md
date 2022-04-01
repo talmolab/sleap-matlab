@@ -7,7 +7,7 @@ A MATLAB community toolbox for applying the SLEAP animal pose estimation deep le
 ## About SLEAP
 [SLEAP](https://sleap.ai) is an open source deep-learning based framework for multi-animal pose tracking. It can be used to track any type or number of animals. 
 
-<img src="https://user-images.githubusercontent.com/3187454/106523005-5f7f1200-6495-11eb-87a5-2b93e251e22a.png" width="512">  
+<p align="center"><img src="https://user-images.githubusercontent.com/3187454/106523005-5f7f1200-6495-11eb-87a5-2b93e251e22a.png" width="512"></p>
 <p align="center"><sup>Example of animal pose estimates overlaid on user data video frame</sup></p>
 
 Key SLEAP features include: 
@@ -30,8 +30,8 @@ The key step of **Prediction** of animal pose estimates, per frame of user data,
 Usage of SLEAP-MATLAB is subject to its [license terms](LICENSE.md). 
 
 #### Requirements
-* MATLAB
-* Deep Learning Toolbox
+* [MATLAB](https://www.mathworks.com/solutions/deep-learning.html)
+* [Deep Learning Toolbox](https://www.mathworks.com/products/deep-learning.html)
 * [Deep Learning Toolbox Converter for Tensorflow Models](https://www.mathworks.com/matlabcentral/fileexchange/64649-deep-learning-toolbox-converter-for-tensorflow-models)
 
 #### Installation
