@@ -1,4 +1,4 @@
-function net = formDAGNetwork(net, topdownModel, inputScale, BboxSize, minThreshold, centroidConfig, topdownConfig)
+function net = compose(net, topdownNet, inputScale, BboxSize, minThreshold, centroidConfig, topdownConfig)
 % This helper function combines centroid and top-down model along with
 % custom layers in between to form a single DAG network object
 % 
@@ -10,7 +10,7 @@ arguments
     net DAGNetwork 
 
     % top-down model
-    topdownModel DAGNetwork
+    topdownNet DAGNetwork
     
     % Input Scale
     inputScale (1,1)
@@ -32,13 +32,13 @@ end
 % commonalities, create unique names for topdown model inorder to combine
 % all into a single model
 centroidNames = arrayfun(@(x) string(x.Name), net.Layers);
-tdNames = arrayfun(@(x) string(x.Name), topdownModel.Layers);
+tdNames = arrayfun(@(x) string(x.Name), topdownNet.Layers);
 sameNames = tdNames==centroidNames;
 newtdNames = tdNames;
 newtdNames(sameNames) = matlab.lang.makeUniqueStrings(centroidNames(sameNames), tdNames(sameNames));
-larrayTd = topdownModel.Layers;
+larrayTd = topdownNet.Layers;
 
-topDownConn = topdownModel.Connections;
+topDownConn = topdownNet.Connections;
 topDownConn.Source = string(topDownConn.Source);
 topDownConn.Destination = string(topDownConn.Destination);
 
@@ -48,7 +48,7 @@ topDownConnWOIn.Destination(contains(topDownConnWOIn.Destination, "/")) = ...
 topDownConnWOIn.Source(contains(topDownConnWOIn.Source, "/")) = ...
     extractBefore(topDownConnWOIn.Source(contains(topDownConnWOIn.Source, "/")), "/");
 
-for i = 1:length(topdownModel.Layers)
+for i = 1:length(topdownNet.Layers)
     sourceIdx = find(topDownConnWOIn.Source==larrayTd(i).Name);
     for n = 1:length(sourceIdx)
         topDownConn.Source(sourceIdx(n)) = strrep(topDownConn.Source(sourceIdx(n)), ...
@@ -69,12 +69,12 @@ lgraph = layerGraph(net);
 
 lgraph = removeLayers(lgraph, 'output');
 
-larray = [TopDownModel.customlayers.Postprocess1CustomLayer('Name', 'postprocesscentroidmodel', ...
+larray = [sleap.model.topdown.customlayers.Postprocess1CustomLayer('Name', 'postprocesscentroidmodel', ...
     'MinThresh', minThreshold, ...
     'MulScale', centroidConfig.model.heads.centroid.output_stride/inputScale, ...
     'BboxSize', BboxSize, 'InputScale', 1/inputScale); ...
     larrayTd(2:end-1); ...
-    TopDownModel.customlayers.Postprocess2CustomLayer('Name', 'postprocesstopdownmodel', ...
+    sleap.model.topdown.customlayers.Postprocess2CustomLayer('Name', 'postprocesstopdownmodel', ...
     'MulScale', topdownConfig.model.heads.centered_instance.output_stride, ...
     'BboxSize', BboxSize)];
 

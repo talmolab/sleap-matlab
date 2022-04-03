@@ -1,4 +1,4 @@
-function net = loadModel(modelPath)
+function net = loadNet(modelPath)
     if ~endsWith(modelPath, '.h5')
         modelPath = fullfile(modelPath, 'best_model.h5');
     end
