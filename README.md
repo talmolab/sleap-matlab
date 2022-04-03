@@ -24,7 +24,7 @@ SLEAP-MATLAB provides functions for the following key steps:
 
 The key step of **Prediction** of animal pose estimates, per frame of user data, is handled natively by the [Deep Learning Toolbox](https://www.mathworks.com/products/deep-learning.html) using the function [`predict`](https://www.mathworks.com/help/deeplearning/ref/seriesnetwork.predict.html).
 
-[Pretrained models](/pretrained_models) and [sample data](/sample_data) are included to help get started. 
+[Pretrained models](/pretrained-models) and [sample data](/sample-data) are included to help get started. 
 
 ## Using SLEAP-MATLAB
 Usage of SLEAP-MATLAB is subject to its [license terms](LICENSE.md). 
