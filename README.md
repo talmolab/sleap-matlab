@@ -1,5 +1,5 @@
 # SLEAP-MATLAB for Multi-Animal Pose Tracking
-A MATLAB community toolbox for applying the [SLEAP](https://sleap.ai) multi-animal pose estimation deep learning framework [\[1\]](#references). This toolbox is intended to make it easy to use SLEAP models natively in MATLAB.
+A MATLAB&reg; community toolbox for applying the [SLEAP](https://sleap.ai) multi-animal pose estimation deep learning framework [\[1\]](#references). This toolbox is intended to make it easy to use SLEAP models natively in MATLAB.
 
 🚧 SLEAP-MATLAB is **early stage**. Interested in using it or helping to create future versions? See [contact info](#contact) below.
 
@@ -20,7 +20,7 @@ SLEAP-MATLAB supports the following key steps:
 * **Prediction** of animal pose estimates per frame of user data 
 * **Visualization** of animal pose estimates for user data within the MATLAB graphics system
 
-The prediction step is carried out simply, via the function [`predict`](https://www.mathworks.com/help/deeplearning/ref/seriesnetwork.predict.html) in the [Deep Learning Toolbox](https://www.mathworks.com/products/deep-learning.html).
+The prediction step is carried out simply, via the function [`predict`](https://www.mathworks.com/help/deeplearning/ref/seriesnetwork.predict.html) in the [Deep Learning Toolbox&trade;](https://www.mathworks.com/products/deep-learning.html).
 
 [Pretrained models](/pretrained_models) and [sample data](/sample_data) are included to help get started. 
 
