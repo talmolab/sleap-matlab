@@ -45,6 +45,8 @@ For support for this toolbox, please open a [GitHub issue](https://github.com/ta
 
 For general SLEAP support, check out the [Official Documentation](https://sleap.ai) or the [support forums on GitHub](https://github.com/talmolab/sleap/issues/new/choose).
 
+For commercial inquiries on using SLEAP for commercial applications, please see the [relevant section in the main SLEAP repository](https://github.com/talmolab/sleap#license).
+
 Please direct other inquiries and interest(❕) to `talmo@salk.edu` with "SLEAP Toolbox" included in the subject line.
 
 ## References
