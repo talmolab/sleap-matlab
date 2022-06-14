@@ -1,5 +1,6 @@
 function vds = makeVideoDatastore(videoPath)
-%makeVideoDatastore   Utility function to make a FileDatastore that incrementally reads from video files.
+%makeVideoDatastore Utility function to make a FileDatastore that incrementally reads from video files.
+% Copyright 2022 The MathWorks, Inc.
 %
 vds = fileDatastore(videoPath, "ReadMode", "partialfile", "ReadFcn", @incrementalVideoReadFcn);
 end

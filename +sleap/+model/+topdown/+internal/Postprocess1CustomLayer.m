@@ -2,8 +2,8 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
 % This is a custom layer to crop out individual animals based on confidence
 % heatmap from centroid model
 %
-% Author: Karthiga Mahalingam
-% Revision: Mar, 2022
+% Copyright 2022 The MathWorks, Inc.
+
 
     properties
         % Minimum threshold to consider for heatmap

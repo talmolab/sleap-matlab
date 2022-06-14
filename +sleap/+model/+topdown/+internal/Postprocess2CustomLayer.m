@@ -2,8 +2,7 @@ classdef Postprocess2CustomLayer < nnet.layer.Layer
 % This is a custom layer to reshape keypoints from topdown model and scale it back to original
 % image 
 %
-% Author: Karthiga Mahalingam
-% Revision: Mar, 2022
+% Copyright 2022 The MathWorks, Inc.
 %
     properties
         % Minimum threshold

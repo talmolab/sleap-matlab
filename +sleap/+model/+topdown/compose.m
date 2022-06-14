@@ -2,8 +2,8 @@ function net = compose(net, topdownNet, inputScale, BboxSize, minThreshold, cent
 % This helper function combines centroid and top-down model along with
 % custom layers in between to form a single DAG network object
 % 
-% Author: Karthiga Mahalingam
-% Revision: Mar, 2022
+% Copyright 2022 The MathWorks, Inc.
+
 
 arguments
     % centroid model
