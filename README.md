@@ -3,7 +3,7 @@ A MATLAB&reg; community toolbox for applying the [SLEAP](https://sleap.ai) multi
 
 🚧 SLEAP Toolbox is **early stage**. Interested in using it or helping to create future versions? See [contact info](#contact) below.
 
-👀 See SLEAP Toolbox in action with this live script [**demo**](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F85a3255c-4ff5-42ef-9c10-b441318b4322%2F501c4bc8-2509-40fc-aba0-323d33dff728%2Ffiles%2FEphysDemo.mlx&embed=web).
+👀 See SLEAP Toolbox in action with this live script [**demo**](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Fdefcaf03-d1cf-4f7d-b5f6-490eec8eadb6%2F5b6fcf73-43cf-48d6-8332-786066ed877a%2Ffiles%2Fdemo.mlx&embed=web).
 
 ## About SLEAP
 [SLEAP](https://sleap.ai) is an open source deep-learning based framework for multi-animal pose tracking. It can be used to track any type or number of animals by training neural networks from user-labeled frames.
