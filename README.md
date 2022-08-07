@@ -26,7 +26,7 @@ The prediction step is carried out simply, via the function [`predict`](https://
 [Pretrained models](/pretrained_models) and [sample data](/sample_data) are included to help get started. 
 
 ## Using SLEAP Toolbox
-Usage of SLEAP Toolbox is subject to its [license terms](LICENSE.md). 
+Usage of SLEAP Toolbox is subject to its [license terms](LICENSE). 
 
 #### Requirements
 * [MATLAB](https://www.mathworks.com/solutions/deep-learning.html)
@@ -53,5 +53,5 @@ Please direct other inquiries and interest(❕) to `talmo@salk.edu` with "SLEAP 
 
 ### Copyright and License Information
 Copyright (c) 2019 - 2022 As Indicated Per File.  
-Distributed under [license](LICENSE.md) permitting academic and research use.  
+Distributed under [license](LICENSE) permitting academic and research use.  
 For commercial inquiries on using SLEAP for commercial applications, please see the [relevant section in the main SLEAP repository](https://github.com/talmolab/sleap#license). 
