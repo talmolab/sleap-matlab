@@ -10,8 +10,7 @@ A MATLAB&reg; community toolbox for applying the [SLEAP](https://sleap.ai) multi
 ## About SLEAP
 [SLEAP](https://sleap.ai) is an open source deep-learning based framework for multi-animal pose tracking. It can be used to track any type or number of animals by training neural networks from user-labeled frames.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/3187454/106523005-5f7f1200-6495-11eb-87a5-2b93e251e22a.png" width="512"></p>
-<p align="center"><sup>Visualization of animal pose estimates with <a href= https://sleap.ai>SLEAP</a>-based models overlaid on a user data video frame</sup></p>
+![Visualization of animal pose estimates with SLEAP-based models overlaid on a user data video frame](https://user-images.githubusercontent.com/23032671/182962807-e435723b-cb23-47c6-b2f9-7e69e5893d44.gif)
 
 ## About SLEAP Toolbox
 Currently, SLEAP Toolbox supports inference based on _top-down_ models trained in SLEAP. To use it, you must first train a set of models from the SLEAP GUI ([see tutorial](https://sleap.ai/tutorials/tutorial.html)).
