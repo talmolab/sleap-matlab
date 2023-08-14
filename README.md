@@ -1,5 +1,5 @@
 # SLEAP Toolbox
-[![View SLEAP Toolbox on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/114700-sleap-toolbox)
+[![View SLEAP Toolbox on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/114700-sleap-toolbox)  [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=talmolab/sleap-matlab&file=demo.mlx)
 
 A MATLAB&reg; community toolbox for applying the [SLEAP](https://sleap.ai) multi-animal pose estimation deep learning framework [\[1\]](#references). This toolbox is intended to make it easy to use SLEAP models natively in MATLAB.
 
