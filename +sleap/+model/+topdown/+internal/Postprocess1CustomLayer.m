@@ -183,26 +183,26 @@ classdef Postprocess1CustomLayer < nnet.layer.Layer
 
             n=1;
 
-            % Reshape peaks for indexing
-            x = reshape(Z1(1, 1, 1, 1:n), [1, 1, 1, n]);
-            y = reshape(Z1(1, 1, 2, 1:n), [1, 1, 1, n]);
-
-            % Create reference object for cropping
-            R = imref2d(layer.BboxSize, [x - layer.BboxSize(1)/2, x + layer.BboxSize(1)/2], [y - layer.BboxSize(2)/2, y + layer.BboxSize(2)/2]);
-
-            % Perform cropping using indexing
-            crops(:,:,1,1:n) = imwarp(inputIm, affine2d(), 'OutputView', R);
-            
-            % for i = 1:size(inputIm,4)
-            %     for j = 1:numAnimalsPerImage(1,1,1,i)
-            %         x = Z1(1,1,1,n);
-            %         y = Z1(1,1,2,n);
+            % % Reshape peaks for indexing
+            % x = reshape(Z1(1, 1, 1, 1:n), [1, 1, 1, n]);
+            % y = reshape(Z1(1, 1, 2, 1:n), [1, 1, 1, n]);
             % 
-            %         R = imref2d(layer.BboxSize, [x - layer.BboxSize(1)/2, x + layer.BboxSize(1)/2], [y - layer.BboxSize(2)/2, y + layer.BboxSize(2)/2]);
-            %         crops(:,:,1,n) = imwarp(inputIm(:,:,:,i),affine2d(),'OutputView',R);
-            %         n=n+1;
-            %     end
-            % end
+            % % Create reference object for cropping
+            % R = imref2d(layer.BboxSize, [x - layer.BboxSize(1)/2, x + layer.BboxSize(1)/2], [y - layer.BboxSize(2)/2, y + layer.BboxSize(2)/2]);
+            % 
+            % % Perform cropping using indexing
+            % crops(:,:,1,1:n) = imwarp(inputIm, affine2d(), 'OutputView', R);
+            
+            for i = 1:size(inputIm,4)
+                for j = 1:numAnimalsPerImage(1,1,1,i)
+                    x = Z1(1,1,1,n);
+                    y = Z1(1,1,2,n);
+
+                    R = imref2d(layer.BboxSize, [x - layer.BboxSize(1)/2, x + layer.BboxSize(1)/2], [y - layer.BboxSize(2)/2, y + layer.BboxSize(2)/2]);
+                    crops(:,:,1,n) = imwarp(inputIm(:,:,:,i),affine2d(),'OutputView',R);
+                    n=n+1;
+                end
+            end
 
             centroidPeaks = single(Z1);
             memory=[];
